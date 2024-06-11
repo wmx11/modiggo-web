@@ -5,7 +5,7 @@ interface Props extends ComponentPropsWithoutRef<"section"> {}
 
 const Section: FC<Props> = (props) => {
   return (
-    <section {...props} className={twMerge("py-24", props.className)}></section>
+    <section {...props} className={twMerge("py-28", props.className)}></section>
   );
 };
 

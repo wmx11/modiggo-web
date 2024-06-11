@@ -1,23 +1,19 @@
-import React from "react";
+import CaseStudies from "./sections/case-studies";
+import ContactUs from "./sections/contact-us";
 import Hero from "./sections/hero";
-import Container from "@/components/ui/container";
-import { Badge } from "@/components/ui/badge";
-import Title from "@/components/ui/title";
+import ProductsAndServices from "./sections/products-and-services";
+import QuestionsAndAnswers from "./sections/questions-and-answers";
+import WhoWeAre from "./sections/who-we-are";
 
 const HomeView = () => {
   return (
     <>
       <Hero />
-      <div>
-        <Container className="text-center space-y-6">
-          <Badge>Who we are</Badge>
-          <Title className="font-normal max-w-[600px] mx-auto">
-            We are Adchitects an award-winning web design agency focused on
-            fostering relationships & work culture to deliver world-class
-            digital products.
-          </Title>
-        </Container>
-      </div>
+      <WhoWeAre />
+      <CaseStudies />
+      <ProductsAndServices />
+      <QuestionsAndAnswers />
+      <ContactUs />
     </>
   );
 };

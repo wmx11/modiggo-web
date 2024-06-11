@@ -20,6 +20,9 @@ const config = {
       },
     },
     extend: {
+      maxWidth: {
+        text: "700px",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },

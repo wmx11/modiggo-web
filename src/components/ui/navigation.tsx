@@ -4,17 +4,17 @@ import CTAButton from "./call-to-action-button";
 
 const Navigation = () => {
   return (
-    <header className="bg-white sticky top-0 z-10">
+    <header className="bg-white sticky top-0 z-10 py-3 border-b">
       <nav>
-        <Container className="flex justify-between py-4 items-center">
+        <Container className="flex justify-between items-center">
           <div>Logo</div>
           <div>
-            <ul className="flex gap-4">
+            <ul className="flex gap-6">
               <li>Services</li>
               <li>Pricing</li>
               <li>Case studies</li>
               <li>About</li>
-              <li>How we work</li>
+              <li>Contact us</li>
             </ul>
           </div>
           <div>

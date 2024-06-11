@@ -9,25 +9,31 @@ const Title: FC<Props> = ({ order = 1, children, className, ...props }) => {
   switch (order) {
     case 1:
       return (
-        <h1 {...props} className={twMerge("font-bold text-4xl !leading-tight", className)}>
+        <h1
+          {...props}
+          className={twMerge(
+            "font-semibold text-4xl !leading-tight",
+            className
+          )}
+        >
           {children}
         </h1>
       );
     case 2:
       return (
-        <h2 {...props} className={twMerge("font-bold text-2xl", className)}>
+        <h2 {...props} className={twMerge("font-semibold text-2xl", className)}>
           {children}
         </h2>
       );
     case 3:
       return (
-        <h3 {...props} className={twMerge("font-bold text-xl", className)}>
+        <h3 {...props} className={twMerge("font-semibold text-xl", className)}>
           {children}
         </h3>
       );
     case 4:
       return (
-        <h4 {...props} className={twMerge("font-bold text-lg", className)}>
+        <h4 {...props} className={twMerge("font-semibold text-lg", className)}>
           {children}
         </h4>
       );
