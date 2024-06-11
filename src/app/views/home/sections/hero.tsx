@@ -1,5 +1,7 @@
 import EurovaistineLogo from "@/app/assets/company-logos/eurovaistine_logo.png";
 import LuminorLogo from "@/app/assets/company-logos/luminor_logo.png";
+import NobleSwapLogo from "@/app/assets/company-logos/nobleswap_logo.png";
+import CoinLogicLogo from "@/app/assets/company-logos/coin_logic_logo.png";
 import { Badge } from "@/components/ui/badge";
 import CTAButton from "@/components/ui/call-to-action-button";
 import Container from "@/components/ui/container";
@@ -10,8 +12,9 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <Section className="">
-      <Container className="">
+    <Section className="bg-pattern relative">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <Container className="relative">
         <div className="space-y-6 mb-16">
           <Badge>We Are Your Digital Blacksmiths</Badge>
           <Title order={1} className="md:text-7xl">
@@ -34,12 +37,18 @@ const Hero = () => {
           <span className="uppercase text-muted-foreground text-sm">
             Trusted by
           </span>
-          <span className="flex gap-12">
+          <span className="flex gap-8">
             <div className="max-w-[80px]">
               <Image src={EurovaistineLogo} alt="Eurovaistine logo" />
             </div>
             <div className="max-w-[80px]">
               <Image src={LuminorLogo} alt="Luminor logo" />
+            </div>
+            <div className="max-w-[80px]">
+              <Image src={NobleSwapLogo} alt="NobleSwap logo" />
+            </div>
+            <div className="max-w-[80px]">
+              <Image src={CoinLogicLogo} alt="The Coin Logic logo" />
             </div>
           </span>
         </div>

@@ -8,7 +8,7 @@ const Highlight: FC<Props> = (props) => {
     <span
       {...props}
       className={twMerge(
-        "bg-gradient-to-r from-violet to-pink bg-clip-text text-transparent",
+        "bg-gradient-to-t from-violet to-pink bg-clip-text text-transparent",
         props.className
       )}
     ></span>
