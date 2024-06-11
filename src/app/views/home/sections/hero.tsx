@@ -16,12 +16,14 @@ const Hero = () => {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <Container className="relative">
         <div className="space-y-6 mb-16">
-          <Badge>We Are Your Digital Blacksmiths</Badge>
-          <Title order={1} className="md:text-7xl">
-            Forging web solutions
-            <br />
-            that <Highlight>convert & drive change</Highlight>
-          </Title>
+          <div className="space-y-2">
+            <Badge>We Are Your Digital Blacksmiths</Badge>
+            <Title order={1} className="md:text-7xl">
+              Forging web solutions
+              <br />
+              that <Highlight>convert & drive change</Highlight>
+            </Title>
+          </div>
           <Title
             order={2}
             className="font-normal text-xl text-muted-foreground max-w-text"

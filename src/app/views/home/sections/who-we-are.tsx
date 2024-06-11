@@ -30,8 +30,9 @@ const WhoWeAre = () => {
                 <TooltipTrigger>
                   <AvatarImage src="https://pbs.twimg.com/profile_images/1703025436270149632/qJby7qRD_400x400.jpg" />
                 </TooltipTrigger>
-                <TooltipContent className="rotate-1">
-                  Vainius. Founder of Modiggo.
+                <TooltipContent className="rotate-1 text-left">
+                  <div>Vainius Mykolaitis</div>
+                  <div className="text-muted-foreground">CEO & Founder</div>
                 </TooltipContent>
               </Tooltip>
             </Avatar>

@@ -15,7 +15,7 @@ const ProductsAndServices = () => {
   return (
     <Section>
       <Container className="space-y-6">
-        <Title>Products & Services</Title>
+        <Title>Products & services</Title>
         <div className="grid grid-cols-3 gap-2">
           <Card className="col-span-2">
             <CardHeader>

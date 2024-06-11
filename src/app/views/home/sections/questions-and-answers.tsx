@@ -14,7 +14,7 @@ const QuestionsAndAnswers = () => {
   return (
     <Section>
       <Container className="space-y-6">
-        <Title>Questions & Answers</Title>
+        <Title>Questions & answers</Title>
         <div>
           <Accordion type="single" collapsible>
             <AccordionItem value="1">
