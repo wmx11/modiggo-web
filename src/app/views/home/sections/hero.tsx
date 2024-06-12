@@ -1,7 +1,6 @@
 import EurovaistineLogo from "@/app/assets/company-logos/eurovaistine_logo.png";
 import LuminorLogo from "@/app/assets/company-logos/luminor_logo.png";
 import NobleSwapLogo from "@/app/assets/company-logos/nobleswap_logo.png";
-import CoinLogicLogo from "@/app/assets/company-logos/coin_logic_logo.png";
 import { Badge } from "@/components/ui/badge";
 import CTAButton from "@/components/ui/call-to-action-button";
 import Container from "@/components/ui/container";
@@ -49,19 +48,9 @@ const Hero = () => {
             <div className="max-w-[80px]">
               <Image src={NobleSwapLogo} alt="NobleSwap logo" />
             </div>
-            <div className="max-w-[80px]">
-              <Image src={CoinLogicLogo} alt="The Coin Logic logo" />
-            </div>
           </span>
         </div>
       </Container>
-
-      {/* <div>Logos</div>
-      <div>Social proof</div>
-      <div>Portfolio</div>
-      <div>Services</div>
-      <div>Tech stack</div>
-      <div>Contact us</div> */}
     </Section>
   );
 };

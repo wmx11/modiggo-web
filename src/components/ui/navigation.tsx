@@ -9,7 +9,7 @@ import Title from "./title";
 
 const Navigation = () => {
   return (
-    <header className="bg-white sticky top-0 z-10 py-3 border-b">
+    <header className="bg-white sticky top-0 z-50 py-3 border-b">
       <nav>
         <Container className="flex justify-between items-center">
           <div>

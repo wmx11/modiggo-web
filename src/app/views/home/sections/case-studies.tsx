@@ -2,6 +2,7 @@ import TheCoinLogic from "@/app/assets/images/the_coin_logic.png";
 import SolpakaNFT from "@/app/assets/images/solpaka_nft.png";
 import Eurovaistine from "@/app/assets/images/eurovaistine.png";
 import NobleSwap from "@/app/assets/images/nobleswap.png";
+import Tiglee from "@/app/assets/images/tiglee.png";
 import { Badge } from "@/components/ui/badge";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
@@ -9,13 +10,57 @@ import Title from "@/components/ui/title";
 import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 
-type CaseStudyProps = {
+interface CaseStudyProps {
   image: string | StaticImageData;
   alt: string;
   category: string[];
   title: string;
   description: string;
-};
+}
+
+const caseStudies: CaseStudyProps[] = [
+  {
+    title:
+      "Eurovaistine E-pharmacy. ~98% page speed index, fastest among competitors.",
+    description:
+      "Eurovaistine project was struggling with slow page load times and poor overall performance. Working together with full backend and frontend teams they achieved ~98% page speed index bringing them more revenue from happy customers.",
+    alt: "Eurovaistine e-pharmacy",
+    category: ["E-commerce", "Frontend"],
+    image: Eurovaistine,
+  },
+  {
+    title: "Tiglee. A component-based website builder.",
+    description:
+      "Modiggo is currently developing a component-based website builder that helps small businesses get their websites up and running faster with reusable components they can host and develop themselves saving them time and effort.",
+    alt: "Tiglee product photo",
+    category: ["SaaS Product", "Fullstack", "Work in Progress"],
+    image: Tiglee,
+  },
+  {
+    title: "Solpaka. Enabling a community-driven project to distribute NFTs.",
+    description:
+      "A custom Web3 application enabling people to mint a Solpaka NFT on the Solana blockchain. NFTs generated using Hashlips, hosted using Candy Machine and Sugar with guards.",
+    alt: "Solpaka OG NFT Application",
+    category: ["Crypto", "Fullstack"],
+    image: SolpakaNFT,
+  },
+  {
+    title: "NobleSwap. A brand-new crypto swap for the Gauss chain.",
+    description:
+      "The Gauss chain needed its cryptocurrency exchange to allow its users to swap native currency into other tokens. The NobleSwap project allowed Gauss to do just that.",
+    alt: "NobleSwap application",
+    category: ["Crypto", "Frontend"],
+    image: NobleSwap,
+  },
+  {
+    title: "The Coin Logic. Allowing product owners to measure performance.",
+    description:
+      "A bespoke blockchain indexing and cryptocurrency social media aggregator helping project owners track and measure their marketing and community performance.",
+    alt: "The Coin Logic project",
+    category: ["Crypto", "Fullstack"],
+    image: TheCoinLogic,
+  },
+];
 
 const CaseStudyCard: FC<CaseStudyProps> = ({
   image,
@@ -48,49 +93,6 @@ const CaseStudyCard: FC<CaseStudyProps> = ({
   );
 };
 
-const caseStudies: CaseStudyProps[] = [
-  {
-    title: "The Coin Logic",
-    description:
-      "A bespoke blockchain indexing and cryptocurrency social media aggregator helping project owners track and measure their marketing and community performance.",
-    alt: "The Coin Logic Project",
-    category: ["Crypto", "Fullstack"],
-    image: TheCoinLogic,
-  },
-  {
-    title: "Solpaka NFT App",
-    description:
-      "A custom Web3 application enabling people to mint a Solpaka NFT on the Solana blockchain. NFTs generated using Hashlips, hosted using Candy Machine and Sugar with guards.",
-    alt: "Solpaka OG NFT Application",
-    category: ["Crypto", "Fullstack"],
-    image: SolpakaNFT,
-  },
-  {
-    title: "Eurovaistine E-pharmacy",
-    description:
-      "A custom Web3 application enabling people to mint a Solpaka NFT on the Solana blockchain. NFTs generated using Hashlips, hosted using Candy Machine and Sugar with guards.",
-    alt: "Solpaka OG NFT Application",
-    category: ["E-commerce", "Frontend"],
-    image: Eurovaistine,
-  },
-  {
-    title: "Tiglee Website Builder",
-    description:
-      "A custom Web3 application enabling people to mint a Solpaka NFT on the Solana blockchain. NFTs generated using Hashlips, hosted using Candy Machine and Sugar with guards.",
-    alt: "Solpaka OG NFT Application",
-    category: ["SaaS Product", "Fullstack", "Work in Progress"],
-    image: Eurovaistine,
-  },
-  {
-    title: "NobleSwap",
-    description:
-      "A custom Web3 application enabling people to mint a Solpaka NFT on the Solana blockchain. NFTs generated using Hashlips, hosted using Candy Machine and Sugar with guards.",
-    alt: "Solpaka OG NFT Application",
-    category: ["Crypto", "Frontend"],
-    image: NobleSwap,
-  },
-];
-
 const CaseStudies = () => (
   <Section id="case-studies">
     <Container className="space-y-6">
@@ -98,7 +100,7 @@ const CaseStudies = () => (
         <Badge>A peek into the forge</Badge>
         <Title>Our recent works</Title>
       </div>
-      <div className="grid grid-cols-2 gap-8 antialiased">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 antialiased">
         {caseStudies.map((props, index) => (
           <CaseStudyCard {...props} key={`case_study_${index}`} />
         ))}
