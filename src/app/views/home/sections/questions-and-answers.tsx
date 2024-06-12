@@ -19,11 +19,15 @@ const questionsAndAnswers: QuestionsAndAnswersSchema[] = [
     answer: "They are things",
   },
   {
-    question: "What are digital products 1?",
+    question: "Can you deliver a complete product?",
     answer: "They are things",
   },
   {
-    question: "What are digital products 2?",
+    question: "How much time do you need?",
+    answer: "They are things",
+  },
+  {
+    question: "How much will it cost?",
     answer: "They are things",
   },
 ];
