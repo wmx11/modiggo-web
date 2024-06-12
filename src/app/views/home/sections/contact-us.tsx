@@ -1,20 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import CTAButton from "@/components/ui/call-to-action-button";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
 } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
+import ContactUsForm from "@/components/ui/contact-us-form";
 import Container from "@/components/ui/container";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import Section from "@/components/ui/section";
-import { Textarea } from "@/components/ui/textarea";
 import Title from "@/components/ui/title";
 
 const ContactUs = () => {
@@ -41,31 +37,7 @@ const ContactUs = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-6">
-                <div>
-                  <Label>Your name</Label>
-                  <Input />
-                </div>
-                <div>
-                  <Label>Your company email</Label>
-                  <Input />
-                </div>
-                <div>
-                  <Label>How did you hear about us?</Label>
-                  <Input />
-                </div>
-                <div>
-                  <Label>How can we help you?</Label>
-                  <Textarea />
-                </div>
-                <div className="flex items-center gap-2">
-                  <Checkbox />
-                  <Label>I will need an NDA</Label>
-                </div>
-                <div>
-                  <Button className="w-full">Get your free estimate</Button>
-                </div>
-              </div>
+              <ContactUsForm />
             </CardContent>
           </Card>
         </div>
