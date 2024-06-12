@@ -38,6 +38,7 @@ import {
 import Image from "next/image";
 import React, { ComponentPropsWithoutRef, FC } from "react";
 import { twMerge } from "tailwind-merge";
+import SEOPreview from "@/components/ui/seo-preview";
 
 interface ProductAndServiceProps extends ComponentPropsWithoutRef<"div"> {
   title: string;
@@ -140,57 +141,7 @@ const productsAndServices: ProductAndServiceProps[] = [
       "We will optimize your websites for search engines so you can enjoy the traffic you deserve.",
     icon: <ScanSearch />,
     className: "lg:col-span-1 lg:row-span-2",
-    children: (
-      <Card>
-        <CardContent className="p-4 space-y-4">
-          <div className="relative flex items-center">
-            <SearchIcon className="absolute w-3 ml-2" />
-            <Input
-              className="pl-6 text-muted-foreground"
-              value="Your app name"
-            />
-          </div>
-
-          <div className="space-y-6">
-            <div>
-              <p className="text-[10px] text-muted-foreground">
-                www.hackernews.com
-              </p>
-              <p className="text-sm">
-                We launched <strong>Your app.</strong>
-              </p>
-              <p className="text-xs text-muted-foreground">
-                The comments should look something like this but let's focus on
-                your app.
-              </p>
-            </div>
-            <div>
-              <p className="text-[10px] text-muted-foreground">
-                www.fancy-website.com
-              </p>
-              <p className="text-sm">
-                <strong>Your app</strong> is making a change!
-              </p>
-              <p className="text-xs text-muted-foreground">
-                With Modiggo you can create an app that is loved by search
-                engines. We don't JUST code. We also help you rank.
-              </p>
-            </div>
-            <div>
-              <p className="text-[10px] text-muted-foreground">
-                www.othernews.com
-              </p>
-              <p className="text-sm">
-                10 ways <strong>Your app</strong> helped them do stuff...
-              </p>
-              <p className="text-xs text-muted-foreground">
-                One of the best ways to get traffic is through organic reach.
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-    ),
+    children: <SEOPreview />,
   },
   {
     title: "Updates, communication & consulting",
@@ -230,7 +181,12 @@ const ProductAndServiceCard: FC<ProductAndServiceProps> = ({
   className,
 }) => {
   return (
-    <Card className={twMerge("group", className)}>
+    <Card
+      className={twMerge(
+        "group bg-gradient-to-t from-zinc-800 to-zinc-900 border-zinc-700 text-white",
+        className
+      )}
+    >
       <CardHeader className="space-y-4">
         <Avatar className="group-hover:-translate-y-1 transition-transform">
           <AvatarFallback className="bg-black [&>*]:w-4 [&>*]:text-white">
@@ -240,14 +196,16 @@ const ProductAndServiceCard: FC<ProductAndServiceProps> = ({
         <CardTitle className="mb-2">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent>{children}</CardContent>
+      <CardContent className="[&_[data-badge]]:text-white">
+        {children}
+      </CardContent>
     </Card>
   );
 };
 
 const ProductsAndServices = () => {
   return (
-    <Section id="services">
+    <Section id="services" className="bg-black text-white">
       <Container className="space-y-6">
         <Title>Products & services</Title>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">

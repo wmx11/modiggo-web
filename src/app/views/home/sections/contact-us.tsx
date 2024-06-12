@@ -22,7 +22,7 @@ const ContactUs = () => {
           <div className="space-y-2">
             <Badge>Ready to work with us?</Badge>
             <Title className="md:text-7xl font-normal max-w-text">
-              Let's forge or improve your <br /> digital product
+              Let's forge or improve your <br /> product
             </Title>
           </div>
           <CTAButton size="xl" />

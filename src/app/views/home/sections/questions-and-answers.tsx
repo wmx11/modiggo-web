@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title from "@/components/ui/title";
@@ -16,11 +17,13 @@ type QuestionsAndAnswersSchema = {
 const questionsAndAnswers: QuestionsAndAnswersSchema[] = [
   {
     question: "What are digital products?",
-    answer: "They are things",
+    answer:
+      "Digital products are websites, online stores, applications, or any other digital material that can bring you revenue. We love developing new products but it's not the only thing we do. We can also help you with ideation, branding, consulting, maintenance, and guiding you on the right path.",
   },
   {
     question: "Can you deliver a complete product?",
-    answer: "They are things",
+    answer:
+      "We can develop and deliver end-to-end products from scratch. We know that sometimes it's not enough to develop something so we can help you with development, copywriting, design, social media, and SEO services. If you already have a product or a service, we can help you find ways to make it even better.",
   },
   {
     question: "How much time do you need?",
@@ -36,7 +39,10 @@ const QuestionsAndAnswers = () => {
   return (
     <Section>
       <Container className="space-y-6">
-        <Title>Questions & answers</Title>
+        <div className="spacey-y-2">
+          <Badge>Q&A</Badge>
+          <Title>Answering some of your questions</Title>
+        </div>
         <div>
           <Accordion type="single" collapsible>
             {questionsAndAnswers.map((item, index) => (

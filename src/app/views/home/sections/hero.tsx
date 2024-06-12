@@ -28,7 +28,8 @@ const Hero = () => {
             className="font-normal text-xl text-muted-foreground max-w-text"
           >
             We craft tailored web solutions, focus on adaptability and proactive
-            partnerships to drive value and help your business grow
+            partnerships to drive value and help you grow. <br />
+            <u>We go the extra mile to understand your business.</u>
           </Title>
           <div>
             <CTAButton size="xl" />
