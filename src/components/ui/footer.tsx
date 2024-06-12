@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white text-sm [&_ul]:space-y-2 [&_h4]:mb-4 py-24">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-3 mb-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 mb-8">
           {renderFooterMenu()}
           <div>
             <Title order={4}>Find us</Title>

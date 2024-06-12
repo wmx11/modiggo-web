@@ -100,7 +100,7 @@ const CaseStudies = () => (
         <Badge>A peek into the forge</Badge>
         <Title>Our recent works</Title>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 antialiased">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-24 antialiased">
         {caseStudies.map((props, index) => (
           <CaseStudyCard {...props} key={`case_study_${index}`} />
         ))}
