@@ -1,14 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title from "@/components/ui/title";
+import { PanelsTopLeftIcon } from "lucide-react";
 
 const ProductsAndServices = () => {
   return (
@@ -18,6 +20,12 @@ const ProductsAndServices = () => {
         <div className="grid grid-cols-3 gap-2">
           <Card className="col-span-2">
             <CardHeader>
+              <Avatar>
+                {/* <AvatarImage></AvatarImage> */}
+                <AvatarFallback className="bg-black">
+                  <PanelsTopLeftIcon className="w-3 text-white"/>
+                </AvatarFallback>
+              </Avatar>
               <CardTitle className="mb-2">Web design and development</CardTitle>
               <CardDescription>
                 We'll build you a website that's so good, it'll make all the
