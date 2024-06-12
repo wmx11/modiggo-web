@@ -33,10 +33,8 @@ export default Navigation;
 
 export const renderMainMenu = () => {
   return mainMenu.map((item, index) => (
-    <li>
-      <Link href={item.href as string} key={`main_menu_${index}`}>
-        {item.label}
-      </Link>
+    <li key={`main_menu_${index}`}>
+      <Link href={item.href as string}>{item.label}</Link>
     </li>
   ));
 };

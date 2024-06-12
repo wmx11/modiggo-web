@@ -19,7 +19,7 @@ import Title from "@/components/ui/title";
 
 const ContactUs = () => {
   return (
-    <Section className="bg-dot-zinc-500/50 relative">
+    <Section className="bg-dot-zinc-500/50 relative" id="contact">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <Container className="grid grid-cols-1 md:grid-cols-2 gap-4 relative">
         <div className="space-y-6">

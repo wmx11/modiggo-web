@@ -4,11 +4,29 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title from "@/components/ui/title";
-import React from "react";
+
+type QuestionsAndAnswersSchema = {
+  question: string;
+  answer: string;
+};
+
+const questionsAndAnswers: QuestionsAndAnswersSchema[] = [
+  {
+    question: "What are digital products?",
+    answer: "They are things",
+  },
+  {
+    question: "What are digital products 1?",
+    answer: "They are things",
+  },
+  {
+    question: "What are digital products 2?",
+    answer: "They are things",
+  },
+];
 
 const QuestionsAndAnswers = () => {
   return (
@@ -17,22 +35,15 @@ const QuestionsAndAnswers = () => {
         <Title>Questions & answers</Title>
         <div>
           <Accordion type="single" collapsible>
-            <AccordionItem value="1">
-              <AccordionTrigger>Question 1</AccordionTrigger>
-              <AccordionContent>Answer 1</AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="2">
-              <AccordionTrigger>Question 1</AccordionTrigger>
-              <AccordionContent>Answer 1</AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="3">
-              <AccordionTrigger>Question 1</AccordionTrigger>
-              <AccordionContent>Answer 1</AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="4">
-              <AccordionTrigger>Question 1</AccordionTrigger>
-              <AccordionContent>Answer 1</AccordionContent>
-            </AccordionItem>
+            {questionsAndAnswers.map((item, index) => (
+              <AccordionItem
+                value={item.question}
+                key={`${item.question}_${index}`}
+              >
+                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionContent>{item.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
       </Container>

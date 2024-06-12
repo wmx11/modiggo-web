@@ -9,8 +9,8 @@ interface Menu {
 
 export const mainMenu: Menu[] = [
   {
-    label: "Work",
-    href: "#work",
+    label: "Case studies",
+    href: "#case-studies",
   },
   {
     label: "Services",
@@ -49,24 +49,7 @@ export const footerMenu: Menu[] = [
   {
     group: {
       label: "Modiggo",
-      items: [
-        {
-          label: "Case studies",
-          href: "",
-        },
-        {
-          label: "Team",
-          href: "",
-        },
-        {
-          label: "Culture",
-          href: "",
-        },
-        {
-          label: "Contact us",
-          href: "",
-        },
-      ],
+      items: [...mainMenu],
     },
   },
 ];

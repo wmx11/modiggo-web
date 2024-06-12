@@ -1,19 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
 } from "@/components/ui/card";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title from "@/components/ui/title";
-import React from "react";
 
 const ProductsAndServices = () => {
   return (
-    <Section>
+    <Section id="services">
       <Container className="space-y-6">
         <Title>Products & services</Title>
         <div className="grid grid-cols-3 gap-2">

@@ -1,53 +1,107 @@
+import TheCoinLogic from "@/app/assets/images/the_coin_logic.png";
+import SolpakaNFT from "@/app/assets/images/solpaka_nft.png";
+import Eurovaistine from "@/app/assets/images/eurovaistine.png";
+import NobleSwap from "@/app/assets/images/nobleswap.png";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title from "@/components/ui/title";
-import React from "react";
+import Image, { StaticImageData } from "next/image";
+import { FC } from "react";
+
+type CaseStudyProps = {
+  image: string | StaticImageData;
+  alt: string;
+  category: string[];
+  title: string;
+  description: string;
+};
+
+const CaseStudyCard: FC<CaseStudyProps> = ({
+  image,
+  alt,
+  category,
+  description,
+  title,
+}) => {
+  return (
+    <div>
+      <div className="mb-4">
+        <div className="relative bg-white flex flex-col rounded-lg overflow-clip shadow-md">
+          <div>
+            <Image src={image} className="object-contain" alt={alt} />
+          </div>
+        </div>
+      </div>
+      <div className="space-y-4">
+        <>
+          <div className="space-x-2">
+            {category.map((item, index) => (
+              <Badge key={`${title}_category_${index}`}>{item}</Badge>
+            ))}
+          </div>
+          <Title order={3}>{title}</Title>
+        </>
+        <p className="text-muted-foreground">{description}</p>
+      </div>
+    </div>
+  );
+};
+
+const caseStudies: CaseStudyProps[] = [
+  {
+    title: "The Coin Logic",
+    description:
+      "A bespoke blockchain indexing and cryptocurrency social media aggregator helping project owners track and measure their marketing and community performance.",
+    alt: "The Coin Logic Project",
+    category: ["Crypto", "Fullstack"],
+    image: TheCoinLogic,
+  },
+  {
+    title: "Solpaka NFT App",
+    description:
+      "A custom Web3 application enabling people to mint a Solpaka NFT on the Solana blockchain. NFTs generated using Hashlips, hosted using Candy Machine and Sugar with guards.",
+    alt: "Solpaka OG NFT Application",
+    category: ["Crypto", "Fullstack"],
+    image: SolpakaNFT,
+  },
+  {
+    title: "Eurovaistine E-pharmacy",
+    description:
+      "A custom Web3 application enabling people to mint a Solpaka NFT on the Solana blockchain. NFTs generated using Hashlips, hosted using Candy Machine and Sugar with guards.",
+    alt: "Solpaka OG NFT Application",
+    category: ["E-commerce", "Frontend"],
+    image: Eurovaistine,
+  },
+  {
+    title: "Tiglee Website Builder",
+    description:
+      "A custom Web3 application enabling people to mint a Solpaka NFT on the Solana blockchain. NFTs generated using Hashlips, hosted using Candy Machine and Sugar with guards.",
+    alt: "Solpaka OG NFT Application",
+    category: ["SaaS Product", "Fullstack", "Work in Progress"],
+    image: Eurovaistine,
+  },
+  {
+    title: "NobleSwap",
+    description:
+      "A custom Web3 application enabling people to mint a Solpaka NFT on the Solana blockchain. NFTs generated using Hashlips, hosted using Candy Machine and Sugar with guards.",
+    alt: "Solpaka OG NFT Application",
+    category: ["Crypto", "Frontend"],
+    image: NobleSwap,
+  },
+];
 
 const CaseStudies = () => (
-  <Section>
+  <Section id="case-studies">
     <Container className="space-y-6">
       <div className="space-y-2">
         <Badge>A peek into the forge</Badge>
         <Title>Our recent works</Title>
       </div>
-      <div className="grid grid-cols-2 gap-8">
-        <div>
-          <div className="mb-4">
-            <Card
-              className="flex p-4 min-h-[400px]"
-              style={{
-                backgroundColor: "#9c99ff",
-                backgroundImage: `radial-gradient(at 3% 47%, hsla(173,71%,62%,1) 0px, transparent 50%),
-radial-gradient(at 44% 71%, hsla(334,98%,69%,1) 0px, transparent 50%),
-radial-gradient(at 76% 44%, hsla(298,71%,60%,1) 0px, transparent 50%),
-radial-gradient(at 84% 74%, hsla(266,77%,65%,1) 0px, transparent 50%),
-radial-gradient(at 88% 5%, hsla(168,68%,75%,1) 0px, transparent 50%),
-radial-gradient(at 84% 81%, hsla(275,91%,66%,1) 0px, transparent 50%),
-radial-gradient(at 75% 56%, hsla(346,82%,75%,1) 0px, transparent 50%)`,
-              }}
-            >
-              <CardContent className="flex-1 bg-white/20 backdrop-blur-lg rounded-lg">
-                This is a test content
-              </CardContent>
-            </Card>
-          </div>
-          <div className="flex-1 space-y-4">
-            <div>
-              <Badge className="mb-2">Crypto</Badge>
-              <Title order={2} className="">
-                Enabling users of a new, custom blockchain trade their
-                cryptocurrency assets
-              </Title>
-            </div>
-            <p className="text-muted-foreground">
-              Pet Media Group centralized the management of 6 pet marketplaces
-              worth $12M by architecting a new platform and migrating millions
-              of data points to it with The Software House.
-            </p>
-          </div>
-        </div>
+      <div className="grid grid-cols-2 gap-8 antialiased">
+        {caseStudies.map((props, index) => (
+          <CaseStudyCard {...props} key={`case_study_${index}`} />
+        ))}
       </div>
     </Container>
   </Section>
