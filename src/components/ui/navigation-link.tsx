@@ -26,7 +26,7 @@ export const NavigationLink: FC<Props> = ({ href, children, dark = false }) => {
   const _href = getHref();
 
   return (
-    <Link href={_href as string} className="flex group text-sm">
+    <Link href={_href as string} className="flex group text-sm inline-block">
       <span className="relative">
         <span>{children}</span>
         <div

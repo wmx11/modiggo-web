@@ -59,7 +59,7 @@ const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-row-reverse items-center justify-between px-4 py-2 gap-4 bg-white/50 backdrop-blur-sm rounded-full border">
+    <div className="flex flex-row-reverse items-center justify-between px-4 py-2 mx-1 gap-4 bg-white/50 backdrop-blur-sm rounded-full border translate-y-1">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger>
           <MenuIcon />
@@ -67,7 +67,7 @@ const MobileNavigation = () => {
         <SheetContent>
           <div>
             <ul
-              className="flex flex-col text-md gap-6"
+              className="flex flex-col [&_a]:text-lg [&_a]:text-center [&_a>span]:w-full font-bold gap-6"
               onMouseDown={(e) => {
                 const target = e.target as HTMLElement;
                 if (target.nodeName !== "UL") {
@@ -75,14 +75,14 @@ const MobileNavigation = () => {
                 }
               }}
             >
-              <li>
+              <li className="border-b pb-2">
                 <Link href="/">
                   <Image src={Logo} alt="Modiggo logo" width={80} />
                 </Link>
               </li>
               {renderMainMenu()}
-              <li>
-                <CTAButton size="sm" className="rounded-full" />
+              <li className="border-t pt-2 [&>a]:w-full">
+                <CTAButton size="sm" className="rounded-full w-full" />
               </li>
             </ul>
           </div>
@@ -122,7 +122,7 @@ const HeaderNavigation = () => {
     return () => {
       window.removeEventListener("resize", getWindowWidth);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
