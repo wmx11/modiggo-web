@@ -16,7 +16,7 @@ interface Menu {
 
 export const mainMenu: Menu[] = [
   {
-    label: "Case studies",
+    label: "Recent work",
     href: "#case-studies",
   },
   {

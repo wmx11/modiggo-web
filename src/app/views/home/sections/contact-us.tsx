@@ -2,13 +2,13 @@
 import { Badge } from "@/components/ui/badge";
 import CTAButton from "@/components/ui/call-to-action-button";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
-import ContactUsForm from "@/components/ui/contact-us-form";
+import ContactUsForm from "@/components/forms/contact-us-form";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";
 import Title from "@/components/ui/title";

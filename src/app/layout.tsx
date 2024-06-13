@@ -5,6 +5,7 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/ui/navigation";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@/components/ui/sonner";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
           <Navigation />
           <main>{children}</main>
           <Footer />
+          <Toaster richColors/>
         </TooltipProvider>
       </body>
     </html>

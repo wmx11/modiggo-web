@@ -10,6 +10,14 @@ const Footer = () => {
           {renderFooterMenu()}
           <div>
             <Title order={4}>Find us</Title>
+            <ul>
+              <li>Švitrigailos g. 11K-109</li>
+              <li>Vilnius, Lithuania</li>
+              <li>
+                <a href="mailto:info@modiggo.com">info@modiggo.com</a>
+              </li>
+              <li>+370 608 19349</li>
+            </ul>
           </div>
         </div>
         <div>
