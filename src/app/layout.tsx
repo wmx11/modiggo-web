@@ -1,11 +1,12 @@
 import Footer from "@/components/ui/footer";
+import Navigation from "@/components/ui/navigation";
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
-import Navigation from "@/components/ui/navigation";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { Toaster } from "@/components/ui/sonner";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script src="https://app.termshub.io/2bae6faa-3e7c-413a-b404-599446f7f7bd/termshub-cookie-consent.js"></Script>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
