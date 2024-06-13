@@ -10,7 +10,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 const WhoWeAre = () => {
   const sectionRef = useRef(null);
@@ -28,7 +28,7 @@ const WhoWeAre = () => {
             <Avatar className="inline-flex mx-2">
               <Tooltip>
                 <TooltipTrigger>
-                  <AvatarImage src="https://pbs.twimg.com/profile_images/1703025436270149632/qJby7qRD_400x400.jpg" />
+                  <AvatarImage src="/vainius.jpg" />
                 </TooltipTrigger>
                 <TooltipContent className="rotate-1 text-left">
                   <div>Vainius Mykolaitis</div>
