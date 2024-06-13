@@ -1,8 +1,4 @@
-import Logo from "@/app/assets/logo/logo.png";
-import Image from "next/image";
-import Link from "next/link";
-import CTAButton from "./call-to-action-button";
-import Container from "./container";
+import HeaderNavigation from "./header-navigation";
 import NavigationLink from "./navigation-link";
 import Title from "./title";
 interface Menu {
@@ -16,7 +12,7 @@ interface Menu {
 
 export const mainMenu: Menu[] = [
   {
-    label: "Recent work",
+    label: "Recent works",
     href: "#case-studies",
   },
   {
@@ -36,19 +32,19 @@ export const footerMenu: Menu[] = [
       items: [
         {
           label: "Custom websites",
-          href: "",
+          href: "#",
         },
         {
           label: "Custom e-commerce",
-          href: "",
+          href: "#",
         },
         {
           label: "Custom web apps",
-          href: "",
+          href: "#",
         },
         {
           label: "Custom mobile apps",
-          href: "",
+          href: "#",
         },
       ],
     },
@@ -92,26 +88,6 @@ export const renderFooterMenu = () => {
   });
 };
 
-const Navigation = () => {
-  return (
-    <header className="bg-white sticky top-0 z-50 py-3 border-b">
-      <nav>
-        <Container className="flex justify-between items-center">
-          <div>
-            <Link href="/">
-              <Image src={Logo} alt="Modiggo logo" width={80} />
-            </Link>
-          </div>
-          <div>
-            <ul className="flex gap-6">{renderMainMenu()}</ul>
-          </div>
-          <div>
-            <CTAButton size="default" />
-          </div>
-        </Container>
-      </nav>
-    </header>
-  );
-};
+const Navigation = HeaderNavigation;
 
 export default Navigation;

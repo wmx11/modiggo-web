@@ -12,7 +12,7 @@ const contactUsAction = async (data: ContactUsSchema) => {
 
     contactUsSchema.parse(data);
 
-    const { data: emailData, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "Contact Modiggo <contact-us@modiggo.com>",
       to: ["v.mykolaitis@modiggo.com"],
       reply_to: data.email,

@@ -27,11 +27,13 @@ const questionsAndAnswers: QuestionsAndAnswersSchema[] = [
   },
   {
     question: "How much time do you need?",
-    answer: "They are things",
+    answer:
+      "We craft custom products. You will get our closest attention to make sure we fully understand your business and align with your ideas to deliver the product you need as quickly as possible. In general, building a website from 0 to 1 takes up to 5 weeks.",
   },
   {
     question: "How much will it cost?",
-    answer: "They are things",
+    answer:
+      "Most of our clients work with us on time and material pricing contracts. But we can also charge a fixed price if you find it more convenient. The starting price for a project is $6,500.",
   },
 ];
 

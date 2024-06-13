@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="space-y-6 mb-16">
           <div className="space-y-2">
             <Badge>We Are Your Digital Blacksmiths</Badge>
-            <Title order={1} className="md:text-7xl">
+            <Title order={1} className="text-6xl md:text-7xl">
               Forging web solutions
               <br />
               that <Highlight>convert & drive change</Highlight>
