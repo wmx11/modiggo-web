@@ -1,5 +1,7 @@
+"use client";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ComponentPropsWithoutRef, FC } from "react";
 
 interface Props extends ComponentPropsWithoutRef<"a"> {
@@ -7,8 +9,24 @@ interface Props extends ComponentPropsWithoutRef<"a"> {
 }
 
 export const NavigationLink: FC<Props> = ({ href, children, dark = false }) => {
+  const pathname = usePathname();
+
+  const getHref = () => {
+    if (pathname === "/" && href?.startsWith("#")) {
+      return href;
+    }
+
+    if (pathname !== "/" && href?.startsWith("#")) {
+      return `/${href}`;
+    }
+
+    return href;
+  };
+
+  const _href = getHref();
+
   return (
-    <Link href={href as string} className="flex group text-sm">
+    <Link href={_href as string} className="flex group text-sm">
       <span className="relative">
         <span>{children}</span>
         <div

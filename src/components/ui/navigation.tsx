@@ -55,6 +55,25 @@ export const footerMenu: Menu[] = [
       items: [...mainMenu],
     },
   },
+  {
+    group: {
+      label: "Legal",
+      items: [
+        {
+          label: "Privacy policy",
+          href: "/privacy-policy",
+        },
+        {
+          label: "Cookie policy",
+          href: "/cookie-policy",
+        },
+        {
+          label: "Terms of services",
+          href: "/terms-of-services",
+        },
+      ],
+    },
+  },
 ];
 
 export const renderMainMenu = () => {
