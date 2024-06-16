@@ -11,6 +11,7 @@ const AnimatedLogo: FC<Props> = (props) => {
   const { scrollYProgress } = useScroll({
     target: props.container,
     offset: ["end end", "start start"],
+    layoutEffect: false,
   });
 
   const progressY = useSpring(scrollYProgress, {

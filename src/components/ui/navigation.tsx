@@ -1,6 +1,7 @@
 import HeaderNavigation from "./header-navigation";
 import NavigationLink from "./navigation-link";
 import Title from "./title";
+
 interface Menu {
   label?: string;
   href?: string;
@@ -106,7 +107,3 @@ export const renderFooterMenu = () => {
     return null;
   });
 };
-
-const Navigation = HeaderNavigation;
-
-export default Navigation;

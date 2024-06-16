@@ -1,5 +1,4 @@
 import Footer from "@/components/ui/footer";
-import Navigation from "@/components/ui/navigation";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
@@ -7,6 +6,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import HeaderNavigation from "@/components/ui/header-navigation";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -44,7 +44,7 @@ export default function RootLayout({
         )}
       >
         <TooltipProvider delayDuration={300}>
-          <Navigation />
+          <HeaderNavigation />
           <main>{children}</main>
           <Footer />
           <Toaster richColors />
