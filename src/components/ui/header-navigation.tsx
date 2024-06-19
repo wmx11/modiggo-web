@@ -1,6 +1,8 @@
 "use client";
-import Logo from "@/app/assets/logo/logo.png";
+import Logo from "@/assets/logo/logo.png";
+import { MOBILE_BREAKPOINT } from "@/lib/constants";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -8,7 +10,6 @@ import CTAButton from "./call-to-action-button";
 import Container from "./container";
 import { renderMainMenu } from "./navigation";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet";
-import { MenuIcon } from "lucide-react";
 
 const DesktopNavigation = () => {
   const { scrollY } = useScroll();
@@ -99,8 +100,6 @@ const HeaderNavigation = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const MOBILE_BREAKPOINT = 640;
-
     if (typeof window === "undefined") {
       return;
     }

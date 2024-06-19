@@ -1,4 +1,3 @@
-import HeaderNavigation from "./header-navigation";
 import NavigationLink from "./navigation-link";
 import Title from "./title";
 

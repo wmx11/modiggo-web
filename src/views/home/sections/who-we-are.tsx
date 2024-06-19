@@ -44,7 +44,6 @@ const WhoWeAre = () => {
           </span>
         </Title>
       </Container>
-
       <AnimatedLogo
         className="max-w-[700px] absolute left-auto right-auto opacity-15 -z-10"
         container={sectionRef}

@@ -1,8 +1,8 @@
-import TheCoinLogic from "@/app/assets/images/the_coin_logic.png";
-import SolpakaNFT from "@/app/assets/images/solpaka_nft.png";
-import Eurovaistine from "@/app/assets/images/eurovaistine.png";
-import NobleSwap from "@/app/assets/images/nobleswap.png";
-import Tiglee from "@/app/assets/images/tiglee.png";
+import TheCoinLogic from "@/assets/images/the_coin_logic.png";
+import SolpakaNFT from "@/assets/images/solpaka_nft.png";
+import Eurovaistine from "@/assets/images/eurovaistine.png";
+import NobleSwap from "@/assets/images/nobleswap.png";
+import Tiglee from "@/assets/images/tiglee.png";
 import { Badge } from "@/components/ui/badge";
 import Container from "@/components/ui/container";
 import Section from "@/components/ui/section";

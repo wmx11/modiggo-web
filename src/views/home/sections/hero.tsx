@@ -1,6 +1,6 @@
-import EurovaistineLogo from "@/app/assets/company-logos/eurovaistine_logo.png";
-import LuminorLogo from "@/app/assets/company-logos/luminor_logo.png";
-import NobleSwapLogo from "@/app/assets/company-logos/nobleswap_logo.png";
+import EurovaistineLogo from "@/assets/company-logos/eurovaistine_logo.png";
+import LuminorLogo from "@/assets/company-logos/luminor_logo.png";
+import NobleSwapLogo from "@/assets/company-logos/nobleswap_logo.png";
 import { Badge } from "@/components/ui/badge";
 import CTAButton from "@/components/ui/call-to-action-button";
 import Container from "@/components/ui/container";
